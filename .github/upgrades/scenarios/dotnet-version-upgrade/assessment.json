@@ -1,0 +1,147 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-04-17T22:17:45.4805738Z",
+  "analysisEndTime": "2026-04-17T22:17:46.2929537Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 2,
+      "incidents": 2,
+      "effort": 2
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 1,
+        "Optional": 0,
+        "Potential": 1,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 1,
+        "Project": 1
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "Copilot.MAUI\\Copilot.MAUI.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "Copilot.MAUI",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0-android",
+          "net8.0-ios",
+          "net8.0-maccatalyst",
+          "net8.0-windows10.0.19041.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 14,
+        "numberOfCodeFiles": 14,
+        "linesTotal": 319,
+        "linesOfCode": 319,
+        "totalApiScanned": 74,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "fd802ce4-8e74-47fb-bfb2-1bacfa007636",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Copilot.MAUI\\Copilot.MAUI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.6",
+              "protected": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.6"
+            },
+            "kind": "File",
+            "path": "Copilot.MAUI\\Copilot.MAUI.csproj",
+            "snippet": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.6",
+            "protectedSnippet": "Microsoft.Extensions.Logging.Debug, 8.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Logging.Debug, and replace with new package Microsoft.Extensions.Logging.Debug 10.0.6",
+            "label": "Microsoft.Extensions.Logging.Debug 8.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Logging.Debug",
+              "PackageVersion": "8.0.0",
+              "PackageNewVersion": "10.0.6",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "5b47b158-f6e1-408f-a55e-25c748a6afa8",
+          "ruleId": "Project.0002",
+          "projectPath": "Copilot.MAUI\\Copilot.MAUI.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+              "protected": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows"
+            },
+            "kind": "File",
+            "path": "Copilot.MAUI\\Copilot.MAUI.csproj",
+            "snippet": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+            "protectedSnippet": "Current target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0\nRecommended target framework: net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows",
+            "properties": {
+              "CurrentTargetFramework": "net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0",
+              "RecommendedTargetFramework": "net8.0-android;net8.0-ios;net8.0-maccatalyst;net8.0-windows10.0.19041.0;net10.0-windows"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
