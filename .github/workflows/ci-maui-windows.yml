@@ -24,13 +24,13 @@ jobs:
         run: dotnet workload install maui-windows maui-ios maui-android maui-maccatalyst
 
       - name: Restore NuGet packages
-        run: dotnet restore --runtime win-x64
+        run: dotnet restore Copilot.MAUI.sln --runtime win-x64
         working-directory: Copilot.MAUI
 
       - name: Build solution
-        run: dotnet build --configuration Release --no-restore --runtime win-x64
+        run: dotnet build Copilot.MAUI.sln --configuration Release --no-restore --runtime win-x64
         working-directory: Copilot.MAUI
 
       - name: Run unit tests
-        run: dotnet test --configuration Release --no-build --verbosity normal --runtime win-x64
+        run: dotnet test Copilot.MAUI.sln --configuration Release --no-build --verbosity normal --runtime win-x64
         working-directory: Copilot.MAUI
