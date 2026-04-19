@@ -28,7 +28,7 @@ jobs:
         working-directory: Copilot.MAUI
 
       - name: Restore NuGet packages
-        run: dotnet restore Copilot.MAUI.sln --runtime win-x64 --configFile Copilot.MAUI/NuGet.config
+        run: dotnet restore Copilot.MAUI.sln --runtime win-x64
         working-directory: Copilot.MAUI
 
       - name: Build solution
