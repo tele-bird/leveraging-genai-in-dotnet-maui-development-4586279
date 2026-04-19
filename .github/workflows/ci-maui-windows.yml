@@ -23,6 +23,10 @@ jobs:
       - name: Install MAUI workload
         run: dotnet workload install maui-windows maui-ios maui-android maui-maccatalyst
 
+      - name: Restore MAUI workloads
+        run: dotnet workload restore
+        working-directory: Copilot.MAUI
+
       - name: Restore NuGet packages
         run: dotnet restore Copilot.MAUI.sln --runtime win-x64
         working-directory: Copilot.MAUI
