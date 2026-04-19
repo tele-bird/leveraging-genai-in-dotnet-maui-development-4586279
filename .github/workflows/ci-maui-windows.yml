@@ -22,7 +22,7 @@ jobs:
           include-prerelease: true
 
       - name: Install MAUI workload
-        run: dotnet workload install maui --include-optional
+        run: dotnet workload install maui-windows
 
       - name: Restore NuGet packages
         run: dotnet restore
